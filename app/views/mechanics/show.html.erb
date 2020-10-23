@@ -8,7 +8,7 @@
 
 
 <%= form_tag "/ride_mechanics/#{@mechanic.id}", method: :post do %>
-  <%= label_tag "Add Ride to workload" %><br>
+  <%= label_tag "Add Ride to workload by an id(1-4)" %><br>
   <%= text_field_tag :ride_id %><br>
   <%= submit_tag "Submit" %><br>
 <% end %>
