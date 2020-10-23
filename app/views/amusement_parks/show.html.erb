@@ -1,0 +1,8 @@
+<%= content_tag :h1, @amusement_park.name %><br>
+<%= content_tag :h1, "Admissions: $#{@amusement_park.price}.00" %>
+
+<%= content_tag :h3, "Rides: " %>
+<% @amusement_park.rides.each.with_index(1) do |ride, index| %>
+  <%= content_tag :p, "#{index}. #{ride.name}" %>
+<% end %>
+<%= content_tag :p, "Average Thrill Rating of Rides: #{@amusement_park.rides.average_thrill_rating.round(1)}/10" %>
